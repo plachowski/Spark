@@ -2,13 +2,8 @@ version: '3'
 
 services:
   sparkhome:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: ./pyspark
     ports:
-      - "8888:8888"
-    volumes:
-      - ./requirements.txt:/opt/spark/requirements.txt
-    command: jupyter-lab --allow-root --no-browser --ip=0.0.0.0
+      - 8889:8889
     restart: always
   

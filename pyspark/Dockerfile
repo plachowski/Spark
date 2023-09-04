@@ -6,7 +6,8 @@ WORKDIR /opt/spark
 
 RUN pip install --upgrade pip
 
-COPY  requirements.txt .
+COPY  requirements.txt ./
 RUN pip3 install -r requirements.txt
 
-CMD jupyter-lab --allow-root --no-browser --ip=0.0.0.0
+EXPOSE 8889
+CMD jupyter notebook --port 8889 --allow-root --no-browser --ip=0.0.0.0

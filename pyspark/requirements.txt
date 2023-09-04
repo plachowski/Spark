@@ -1,5 +1,6 @@
 pyspark==3.2.0
 jupyterlab
+notebook
 pandas
 pyyaml
 delta-spark
